@@ -1,29 +1,28 @@
 import yaml
-from termcolor import colored, cprint
 
 auto_termination: str = f"AUTO TERMINATION at {__file__}"
 def msg(msg_type):
-    brackets_map: list = [['[',']'],['light_grey','bold']]
+    brackets_map: list = ['[',']']
     message = ''
     match msg_type:
         case "success":
-            message = colored("success","light_green",attrs=['bold'])
+            message = "\033[92;1msuccess\033[0m"
         case "notice":
-            message = colored("notice","blue",attrs=['bold'])
+            message = "\033[94;1mnotice\033[0m"
         case "info":
-            message = colored("info","magenta",attrs=['bold'])
+            message = "\033[95;1minfo\033[0m"
         case "warning":
-            message = colored("warning","yellow",attrs=['bold'])
+            message = "\033[33;1mwarning\033[0m"
         case "error":
-            message = colored("error","red",attrs=['bold'])
-    return(f"{colored(brackets_map[0][0],brackets_map[1][0],attrs=[brackets_map[1][1]])}{message}{colored(brackets_map[0][1],brackets_map[1][0],attrs=[brackets_map[1][1]])} ")
+            message = "\033[91;1merror\033[0m"
+    return(f"\033[90;1m{brackets_map[0]}\033[0m{message}\033[90;1m{brackets_map[1]}\033[0m ")
 
 def yml_read(fn):
     try:
         with open(fn, 'r', encoding='utf-8') as f:
             content = yaml.safe_load(f)
-        cprint(msg("success")+f"{fn} loaded successfully")
+        print(msg("success")+f"{fn} loaded successfully")
         return content
     except Exception as e:
-        cprint(msg("error")+f"There was an error loading {fn}\n Error: {e}")
+        print(msg("error")+f"There was an error loading {fn}\n Error: {e}")
         raise Exception(auto_termination)
