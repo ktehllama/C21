@@ -111,7 +111,7 @@ tk_title: str = "Akarvis | Blackjack Card Counter"
 BUTTON_RATIO: list = [[5,3],[22,12]]
 BUTTON_BG: str = "white"
 FONTSTYLE: list = ["Lato", 12, "bold"]
-RELIEF_TYPE: str = 'flat'
+RELIEF_TYPE: str = 'solid'
 BORDER_BGT: list = ['black',2]
 
 def interpolate(value):
