@@ -2,6 +2,21 @@ from tkinter import *
 from cyml_utils import *
 from method_parse import *
 
+import sys
+import ctypes
+
+if sys.platform.startswith('win'):
+    STD_OUTPUT_HANDLE = -11
+    ENABLE_VIRTUAL_TERMINAL_PROCESSING = 0x0004
+    handle = ctypes.windll.kernel32.GetStdHandle(STD_OUTPUT_HANDLE)
+    mode = ctypes.c_ulong()
+    ctypes.windll.kernel32.GetConsoleMode(handle, ctypes.byref(mode))
+    mode.value |= ENABLE_VIRTUAL_TERMINAL_PROCESSING
+    ctypes.windll.kernel32.SetConsoleMode(handle, mode)
+    print(msg("warning") + "Running on Windows (ANSI escape codes activated)")
+else:
+    print(msg("warning") + "Not Running on Windows (ANSI escape codes might be disabled)")
+
 mpr = MethodParser()
 
 DECKS: int = 6
