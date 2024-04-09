@@ -1,9 +1,3 @@
-# TODO | MARCH 28,2024 12:35 pm
-# Make stats box label not go white when hovering 4
-# Make average of TC and RC and add color for it (using interpolate) 3
-# Add history and last card played on GUI 1
-# Add total cards and decks left 2
-
 from tkinter import *
 from cyml_utils import *
 from method_parse import *
@@ -170,22 +164,24 @@ def make_expandable(frame,r,c):
 
 stats_frame = Frame(mainframe, bg='white')
 stats_frame.pack(expand=True, fill='x')
-make_expandable(stats_frame,2,2)
+make_expandable(stats_frame,3,2)
 stats_b_list: list = [Button(stats_frame, text="{}".format(button_methods_name[i]), width=BUTTON_RATIO[1][0], height=BUTTON_RATIO[1][1], font=["Lato", 9, "bold"], fg='#e9edf0', bg=BUTTON_BG, relief=RELIEF_TYPE, highlightbackground=BORDER_BGT[0],highlightthickness=BORDER_BGT[1],command=lambda text_value=str(i+2): print(text_value)) for i in range(amount_methods)]
 rc(stats_b_list, 4, 2)
 
-SIDEBAR_COLOR: str = 'white'
-history_sidebar_frame = Frame(stats_frame, bg=SIDEBAR_COLOR,bd=2,relief='solid')
-history_sidebar_frame.grid(row=0,column=2, rowspan=2, sticky='nsew')
+SIDEBARS_COLOR: str = 'white'
+stats_sidebar_frame = Frame(stats_frame, bg=SIDEBARS_COLOR,bd=2,relief='solid')
+stats_sidebar_frame.grid(row=0,column=2, rowspan=4, sticky='nsew')
+s_sidebar = Label(stats_sidebar_frame, text=f'PLAYED CARD\nDECKS LEFT\nALL CARDS', font=['Lato',9,'bold'], padx=6, bg=SIDEBARS_COLOR)
+s_sidebar.pack(side='left')
 
-# h_sidebar = Label(history_sidebar_frame, text='a\n1\n2\n3', font=['Lato',9,'bold'], padx=6, bg=SIDEBAR_COLOR)
-# h_sidebar.pack(side='left')
-# TODO: MAKE LAST ITEM COLORED IN HISTORY
-sbr = Text(history_sidebar_frame, font=['Lato',9,'bold'], padx=6, bg=SIDEBAR_COLOR, height=10)
+history_sidebar_frame = Frame(stats_frame, bg=SIDEBARS_COLOR,bd=2,relief='solid')
+history_sidebar_frame.grid(row=3,column=0, columnspan=2,sticky='nsew')
+history_bar = Label(history_sidebar_frame,text='History (Last 10 Cards)', font=['Lato',9,'bold'], padx=6, bg=SIDEBARS_COLOR)
+history_bar.pack()
 
-def history_sidebar_update(sidebar_list):
-    pass
-    # h_sidebar.configure(text="{}\n{}\n{}".format('mocha','\n\n'.join(str(idx) for idx in reversed(sidebar_list)),'loca'))
+def history_stats_sidebar_update(pc,dl,ac,ch):
+    s_sidebar.configure(text=f'PC: ┝{pc}┥\n\nDL: {round(dl,2)}\n\nAC: {ac}')
+    history_bar.configure(text='History: {}'.format(' , '.join(reversed(ch))))
    
 buttons_frame = Frame(mainframe, bg='grey')
 buttons_frame.pack(expand=True, fill='x')
@@ -200,7 +196,7 @@ def button_listener(i_card):
 
     rt_count_update(i_card)
     bstats__update(stats_b_list)
-    history_sidebar_update(cards_history)
+    history_stats_sidebar_update(played_card,decks_left,total_cards,cards_history)
 
     print(msg('notice')+f"Total Cards: {total_cards}\nHistory: {cards_history}\nDecks Left: {decks_left}\nPlayed card: {played_card}")
 
