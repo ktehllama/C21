@@ -1,2 +1,2 @@
-# C21 [v0.6]
+# C21 [v1]
 Blackjack Card Counting Calculator Bot
