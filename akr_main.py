@@ -120,8 +120,8 @@ def bstats__update(button_list):
     
 
 TK_BACKGROUND: str = "#F0E7E9"
-TK_WINSIZE: str = "500x600"
-tk_title: str = "Akarvis | Blackjack Card Counter"
+TK_WINSIZE: str = "650x700"
+tk_title: str = "C21 | Blackjack Card Counter"
 
 BUTTON_RATIO: list = [[5,3],[22,12]]
 BUTTON_BG: str = "white"
@@ -157,7 +157,6 @@ root = Tk()
 root.title(tk_title)
 root.geometry(TK_WINSIZE)
 root.configure(bg=TK_BACKGROUND)
-label_title = Label(root, text="Blackjack Card Counter").pack(pady=10)
 
 mainframe = Frame(root, bg='yellow', bd=2, relief='solid')
 mainframe.pack(expand=True)
