@@ -10,6 +10,14 @@ for all your online card counting needs, or to just ~~steal~~ borrow some code, 
 - Some Understanding of Blackjack Required
 - 🔥 Beat the Casino 🔥
 
+<details>
+  <summary>Images (Click Me):</summary>
+<br>
+<img src="https://github.com/ktehllama/C21/blob/main/C21-imgs/c21-startup.PNG" alt="c21-startup" />
+<br>
+<img src="https://github.com/ktehllama/C21/blob/main/C21-imgs/c21-demo.PNG" alt="c21-demo" />
+</details>
+
 ## Before we start...
 Before you can use this tool effectively, it's important you have a concrete understanding of
 the following:
