@@ -2,7 +2,7 @@
 
 [![en](https://img.shields.io/badge/Change_Language_to-English-%23EA736F)](https://github.com/ktehllama/C21)
 ## Generador de Guita Infinita!
-Hablando en serio, C21 es una _Calculadora de Conteo de Cartas de Blackjack_ con una interfaz gráfica integrada hecha usando la biblioteca [Tkinter](https://docs.python.org/3/library/tkinter.html). Tiene 4 métodos de conteo de cartas integrados (que se detallan más adelante en este bello leéme), una interfaz de terminal a todo color y muchas más características para todas tus necesidades de conteo de cartas en línea, o simplemente para ~~robar~~ pedir prestado algo de código, ¿no?
+Hablando en serio, C21 es una _Calculadora de Conteo de Cartas de Blackjack_ con una interfaz gráfica integrada hecha usando la biblioteca [Tkinter](https://docs.python.org/3/library/tkinter.html). Tiene 4 métodos de conteo de cartas integrados (que se detallan más adelante en este hermoso leéme), una interfaz de terminal a todo color y muchas más características para todas tus necesidades de conteo de cartas en línea, o simplemente para ~~robar~~ pedir prestado algo de código, ¿no?
 
 - Rápido y Compacto
 - Se Requiere un Entendimiento Básico de Blackjack
@@ -22,13 +22,13 @@ Antes de poder usar esta herramienta efectivamente, es importante que tengas un 
 - Cómo funcionan los métodos de conteo de cartas que se usan en C21
 - Cómo usar las tablas de estrategia básica
 
-Aprender a jugar al Blackjack es probablemente lo más sencillo de todo. Puedes ver [este increíble video de Blackjack Apprenticeship](https://www.youtube.com/watch?v=PljDuynF-j0) para aprender Blackjack rápidamente y fácilmente. También necesitarías memorizar diferentes palabras clave que se usan comúnmente al hablar sobre Blackjack, como recuento en curso, recuento verdadero, penetración del mazo, y más. Todo lo que necesitas hacer es memorizar cómo funcionan los métodos de conteo de cartas para aprender a usarlos. Los que se usan en C21 son:
+Aprender a jugar al Blackjack es probablemente lo más sencillo de todo. Puedes ver [este increíble video de Blackjack Apprenticeship](https://www.youtube.com/watch?v=PljDuynF-j0) para aprender Blackjack rápidamente y fácilmente. También necesitarías memorizar diferentes palabras clave que se usan comúnmente al hablar sobre Blackjack, como el conteo, conteo verdadero, penetración del mazo, y más. Todo lo que necesitas hacer es memorizar cómo funcionan los métodos de conteo de cartas para aprender a usarlos. Los que se usan en C21 son:
 - [HiLo](https://wizardofodds.com/games/blackjack/card-counting/high-low/)
 - [Omega II](https://www.casinoguardian.co.uk/blackjack/omega-ii-blackjack-system/)
 - [KO](https://www.bonusinsider.com/blackjack/the-knock-out-card-counting-system/)
 - [Cuenta de Ases y Cincos](https://wizardofodds.com/games/blackjack/ace-five-count/)
 
-Puedes hacer clic en los enlaces para obtener más información sobre los métodos o puedes ir al archivo `bjstrats.yaml` en el proyecto, donde bajo el nombre del método hay una etiqueta `description` que tiene toda la información bien condensada para leer, aunque aún así recomendaría visitar los sitios web enlazados arriba.
+Puedes hacer clic en los enlaces para obtener más información sobre los métodos o puedes ir al archivo `bjstrats.yaml` en el proyecto, donde bajo el nombre del método hay una etiqueta `description` que tiene toda la información bien condensada para leer (en __inglés__), aunque aún así recomendaría buscar sitios para investigar o visitar los sitios web enlazados arriba.
 
 Finalmente, las tablas de estrategia básica te enseñan exactamente cuándo: pedir o plantarte, doblar, dividir parejas o rendirse. Estas son extremadamente útiles de tener y recomiendo [esta](https://www.blackjackapprenticeship.com/blackjack-strategy-charts/), también de Blackjack Apprenticeship.
 
@@ -36,14 +36,14 @@ Finalmente, las tablas de estrategia básica te enseñan exactamente cuándo: pe
 C21 requiere una versión de [Python](https://www.python.org/) 3.10 o superior. Una vez que hayas instalado Python y lo hayas configurado, instala C21 como un archivo Zip y ejecuta el archivo principal: `akr_main.py`
 
 > __Nota importante:__
-Más adelante, agregaré un archivo EXE donde la calculadora se podrá ejecutar directamente sin necesidad de instalar Python.
+Más adelante, agregaré un archivo EXE donde la calculadora se podrá ejecutar directamente sin la necesidad de instalar Python.
 
 La única instalación de pip necesaria es `pyyaml`, los archivos auxiliares ya están allí y el resto de los módulos ya están integrados en Python.
 ```
 pip install pyyaml
 ```
 
-__IMPORTANTE__: Antes de ejecutar el programa, debes cambiar la variable `method_file` en `method_parse.py`, ubicado en la parte superior del script después de las importaciones, a la _ruta del archivo_ de tu `bjstrats.yaml`. Ahí es donde se almacenan todos los métodos, y es esencial para C21. Si no se encuentra ningún archivo yaml, la terminal arrojará un error, o no se ejecutará en absoluto. También debes cambiar la constante `DECKS` cerca de la parte superior de `akr_main.py` al número de mazos con los que estás jugando, está configurada en `6` por defecto.
+__IMPORTANTE__: Antes de ejecutar el programa, tenes que cambiar la variable `method_file` en `method_parse.py`, ubicado en la parte superior del script después de las importaciones, a la _ruta del archivo_ de tu `bjstrats.yaml`. Ahí es donde se almacenan todos los métodos, y es esencial para C21. Si no se encuentra ningún archivo yaml, la terminal arrojará un error, o no se ejecutará en absoluto. También debes cambiar la constante `DECKS` cerca de la parte superior de `akr_main.py` al número de mazos con los que estás jugando con, está configurada en `6` por defecto.
 
 ## Cómo Usar C21
 Cuando ejecutas el archivo principal, aparecerá una interfaz gráfica de calculadora en la pantalla y la terminal te proporcionará información sobre los métodos actuales que se están ejecutando y el estado general del programa. Esta ventana es redimensionable y te recomiendo que la ajustes a tu gusto, solo no la hagas demasiado pequeña.
@@ -83,7 +83,7 @@ Historial: 5, 6, A, 9, 10, 2, A, 2, 10
 Puedes cambiar el límite de las cartas que muestra de 10 a otro número yendo a la función `append_limit` y cambiando el valor predeterminado del parámetro `limit` a otro número. Trata de no hacerlo demasiado grande ya que todas las cartas no cabrán en la interfaz gráfica de usuario.
 
 ### Teclado de Cartas
-El hermoso teclado de cartas te permite ingresar tus cartas para que puedas usar la calculadora (¡guau!). En una configuración de 5x2, todo lo que necesitas hacer es presionar el botón correspondiente a la(s) carta(s) que deseas insertar en la calculadora. __Como recordatorio__, todos los Jacks, Queens y Kings se cuentan como Dieces, así que el botón para 10 incluye las letras J Q K para que no te preguntes dónde están o si olvidé incluirlos.
+El hermoso teclado de cartas te permite ingresar tus cartas para que puedas usar la calculadora (wow!). En una configuración de 5x2, todo lo que necesitas hacer es presionar el botón correspondiente a la(s) carta(s) que deseas insertar en la calculadora. __Como recordatorio__, todos los Jacks, Queens y Kings se cuentan como Dieces, así que el botón para 10 incluye las letras J Q K para que no te preguntes dónde están o si olvidé incluirlos.
 
 ### Depuración en la Terminal
 Buen trabajo, ahora sabes cómo usar la GUI y qué significan todas las secciones. Pero es posible que hayas notado que cuando inicias C21 y cada vez que presionas un botón de carta, obtienes información en la terminal, todo esto es para fines de depuración y para mostrar lo que está sucediendo. Hay 5 etiquetas diferentes que puedes obtener junto con un mensaje en la terminal:
