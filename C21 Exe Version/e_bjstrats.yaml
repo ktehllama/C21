@@ -40,7 +40,7 @@ methods:
         - "Increase Bet"
         - "Rich in High Cards"
       neutral:
-        - "Bet Normally Low"
+        - "Neutral Bet"
         - "Mixed Cards"
       negative:
         - 0
@@ -93,7 +93,7 @@ methods:
         - "Increase Bet"
         - "Rich in High Cards"
       neutral:
-        - "Bet Normally Low"
+        - "Neutral Bet"
         - "Mixed Cards"
       negative:
         - 1
@@ -175,7 +175,7 @@ methods:
         - "Increase Bet"
         - "Rich in High Cards"
       neutral:
-        - "Bet Normally Low"
+        - "Neutral Bet"
         - "Mixed Cards"
       negative:
         - 000
@@ -242,7 +242,7 @@ methods:
           - "Increase Bet (Double)"
           - "Rich in Aces"
       neutral:
-          - "Bet Normally Low"
+          - "Neutral Bet"
           - "Mixed Cards"
       negative:
           - 1
