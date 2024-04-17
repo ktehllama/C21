@@ -56,6 +56,7 @@ The only pip installation needed is `pyyaml` and `termcolor`, the helper files a
 and the rest of the modules are already build into Python.
 ```
 pip install pyyaml
+pip install termcolor
 ```
 
 __IMPORTANT__: Before you run the program though, you need to change the `method_file` variable in
