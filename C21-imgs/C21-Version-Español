@@ -239,7 +239,7 @@ methods:
     recommendations:
       positive: 
           - 2
-          - "Increase Bet (Double)"
+          - "Aumentar Apuesta (Duplicarla)"
           - "Rich in Aces"
       neutral:
           - "Apuesta Neutral"
