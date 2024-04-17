@@ -43,6 +43,7 @@ nice and condensed for reading, though I would still recommend visting the websi
 
 Finally, basic strategy charts teaches you exactly when to: hit or stand, double down, split pairs or
 surrender. These are extremely useful to have and I recommend [this one](https://www.blackjackapprenticeship.com/blackjack-strategy-charts/), also by Blackjack Apprenticeship.
+
 ## Exe Installation
 This section is for if you want to use the EXE version of C21 where you don't need to install Python, just
 instlal the program file, the settings file and the methods file.
