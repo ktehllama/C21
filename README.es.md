@@ -38,9 +38,10 @@ C21 requiere una versión de [Python](https://www.python.org/) 3.10 o superior. 
 > __Nota importante:__
 Más adelante, agregaré un archivo EXE donde la calculadora se podrá ejecutar directamente sin la necesidad de instalar Python.
 
-La única instalación de pip necesaria es `pyyaml`, los archivos auxiliares ya están allí y el resto de los módulos ya están integrados en Python.
+La única instalación de pip necesaria es `pyyaml` y `termcolor`, los archivos auxiliares ya están allí y el resto de los módulos ya están integrados en Python.
 ```
 pip install pyyaml
+pip install termcolor
 ```
 
 __IMPORTANTE__: Antes de ejecutar el programa, tenes que cambiar la variable `method_file` en `method_parse.py`, ubicado en la parte superior del script después de las importaciones, a la _ruta del archivo_ de tu `bjstrats.yaml`. Ahí es donde se almacenan todos los métodos, y es esencial para C21. Si no se encuentra ningún archivo yaml, la terminal arrojará un error, o no se ejecutará en absoluto. También debes cambiar la constante `DECKS` cerca de la parte superior de `akr_main.py` al número de mazos con los que estás jugando con, está configurada en `6` por defecto.
