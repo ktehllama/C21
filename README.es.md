@@ -1,6 +1,6 @@
 # C21 [Español]   
 
-[![en](https://img.shields.io/badge/Change_Language_to-English-%23EA736F](https://github.com/ktehllama/C21)
+[![en](https://img.shields.io/badge/Change_Language_to-English-%23EA736F)](https://github.com/ktehllama/C21)
 ## Generador de Guita Infinita!
 Hablando en serio, C21 es una _Calculadora de Conteo de Cartas de Blackjack_ con una interfaz gráfica integrada hecha usando la biblioteca [Tkinter](https://docs.python.org/3/library/tkinter.html). Tiene 4 métodos de conteo de cartas integrados (que se detallan más adelante en este bello leéme), una interfaz de terminal a todo color y muchas más características para todas tus necesidades de conteo de cartas en línea, o simplemente para ~~robar~~ pedir prestado algo de código, ¿no?
 
