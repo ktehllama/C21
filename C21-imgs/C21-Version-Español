@@ -1,0 +1,250 @@
+methods:
+  hilo:
+    description: |
+      "The Hi-Lo system (High-Low) is simple and straightforward.
+      It is a BALANCED system, the count, if counted correctly
+      should start at 0 and end with 0.
+      Since it is BALANCED, for more accurate information, the
+      running count will be converted to the true count or the
+      running count divided by the remaning decks.
+
+      2, 3, 4, 5, 6	count +1
+      7, 8, 9	count 0
+      10, J, Q, K, A	count -1
+      
+      Keep track of cards from the beginning or the final count
+      will not be accurate. 
+      When the count is POSITIVE they are
+      in an advantageous state, and so the bet should be
+      increased, the deck is more rich in HIGH value cards.
+      When the count is NEGATIVE, they do not have an edge and
+      should refrain from increasing the wagers, the deck is rich 
+      in LOW value cards (Bet the least)."
+    card values:
+      "2": 1
+      "3": 1
+      "4": 1
+      "5": 1
+      "6": 1
+      "7": 0
+      "8": 0
+      "9": 0
+      "10": -1
+      "J": -1
+      "Q": -1
+      "K": -1
+      "A": -1
+    recommendations:
+      positive: 
+        - 1
+        - "Aumentar Apuesta"
+        - "Rich in High Cards"
+      neutral:
+        - "Apuesta Neutral"
+        - "Mixed Cards"
+      negative:
+        - 0
+        - "Aposta Lo Mínimo"
+        - "Rich in Low Cards"
+  omegaii:
+    description: |
+      "The Omega-II system is more complex with higher levels of
+      accuracy and efficency with a 99% betting efficiency.
+      It is a BALANCED system, the count, if counted correctly
+      should start with 0 and end with 0.
+      Since it is BALANCED, for more accurate information, the
+      running count will be converted to the true count or the
+      running count divided by the remaning decks.
+
+      4, 5, 6	count +2
+      2, 3, 7	count +1
+      8, A	count 0
+      9	count -1
+      10, J, Q, K	count -2
+
+      This system gives players high chances of determining their
+      position at any point in the game.
+      Keep track of cards from the beginning or the final count
+      will not be accurate. 
+      When the count is POSITIVE they are
+      in an advantageous state, and so the bet should be
+      increased, the deck is more rich in HIGH value cards
+      (Increase bet by more).
+      When the count is NEGATIVE, they do not have an edge and
+      should refrain from increasing the wagers, the deck is rich 
+      in LOW value cards. (Bet the least)"
+    card values:
+      "4": 2
+      "5": 2
+      "6": 2
+      "2": 1
+      "3": 1
+      "7": 1
+      "8": 0
+      "A": 0
+      "9": -1
+      "10": -2
+      "J": -2
+      "Q": -2
+      "K": -2
+    recommendations:
+      positive: 
+        - 2
+        - "Aumentar Apuesta"
+        - "Rich in High Cards"
+      neutral:
+        - "Apuesta Neutral"
+        - "Mixed Cards"
+      negative:
+        - 1
+        - "Aposta Lo Mínimo"
+        - "Rich in Low Cards"
+  ko:
+    description: |
+      "The K-O system (Knockout Count) gives players the
+      opportunity to make wiser decisions for their moves and bets.
+      It is both simple and effective.
+      This strategy is very similar to the popular Hi-Lo system 
+      which is very convenient for players who are already 
+      familiar with this basic card counting method. The only 
+      number that has a different assigned value than the Hi-Lo 
+      system is seven.Another very important classification the 
+      card counting systems have is whether they are balanced 
+      or unbalanced ones. In contrast to the Hi-Lo system which is 
+      a balanced one, the K-O system falls into the category of the 
+      UNBALANCED systems. Which means afterthe whole deck(s) are 
+      played the final number (count) WILL NOT be 0.
+
+      2, 3, 4, 5, 6, 7	count +1
+      8, 9	count 0
+      10, J, Q, K, A	count -1
+      
+      Prior to playing, it is crucial to pay attention at the 
+      number of decks involved in the game as they will determine the count 
+      players should begin with. The STARTING COUNT IS CALCULATED this way:
+      
+      4 - (4 x the number of decks in play)
+      
+      So, the starting count is 0 for a single-deck game, -4 for a 
+      double-deck game, and -20 for a six-deck game. In other words, the 
+      higher the number of decks in play, the lower the starting count is.
+      Another important thing is that if a player counts correctly through 
+      a deck of cards, their FINAL COUNT will always be +4
+      
+      ADJUSTING BETS goes like this:
+      Once the count becomes a positive value (at least +2), players can 
+      increase their bet size to 2 or more units.This is the most crucial 
+      moment in the game, when the odds shift in players' favor. This is 
+      when using the KO count in a SINGLE-DECK game, we should wait for the 
+      running count to become +2 to raise our bets. When we play a DOUBLE-DECK 
+      game, however, we increase the bets when the running count is +1. This is
+      called the “key count” or “pivot count” and it varies, depending 
+      on the number of decks used:"
+
+      Number on the right is the key count, which is when you should increase
+      your bet when the count becomes that number:
+
+      1 deck   2
+      2 decks  1
+      6 decks -4
+      8 decks -6
+
+      There is one more thing players should change, except for adjusting their 
+      bet size,when using the Knock Out method. They can, and should according to the 
+      creators of the system, deviate from the standard strategy with regards to the 
+      Insurance side bet. The basic strategy says never to take INSURANCE but KO 
+      allows it under the perfect circumstances:
+      only if the running count is +3 or greater.
+    card values:
+      "2": 1
+      "3": 1
+      "4": 1
+      "5": 1
+      "6": 1
+      "7": 1
+      "8": 0
+      "9": 0
+      "10": -1
+      "J": -1
+      "Q": -1
+      "K": -1
+      "A": -1
+    recommendations:
+      positive: 
+        - 000
+        - "Aumentar Apuesta"
+        - "Rich in High Cards"
+      neutral:
+        - "Apuesta Neutral"
+        - "Mixed Cards"
+      negative:
+        - 000
+        - "Aposta Lo Mínimo"
+        - "Rich in Low Cards"
+  acefivecount:
+    description: |
+      "The Ace Five blackjack strategy is one of the simplest forms of card counting 
+      in the game of 21. All you need to do is keep track of 2 cards - Aces and Fives.
+
+      The Ace Five card count works under a similar premise, except it narrows it 
+      down to just two cards. Aces are easily the best card you can get. Not only 
+      are they necessary for a natural blackjack, but they're worth a lot either way. 
+      Getting to 17+ without going over 21 is much easier with an Ace on the table. 
+      Moreover, if you happen to go over anyway, they can be worth 1 as well, which 
+      gives you some room to take risks you otherwise shouldn't. Combined with the 
+      blackjack basic strategy, stacking the deck with aces is a considerable advantage.
+      Conversely, fives are easily one of the worst cards you can draw. Even with an 
+      Ace, they'll only get you to 16, which is relatively easy for the dealer to beat.
+      However, you're more likely to end up in the 11-15 range after the 
+      first two cards, which is not where you want to be.
+      Hence, the idea is simple - you keep track of the Aces and Fives. 
+
+      If there are more Aces left in the shoe, you raise the stakes. 
+      If there are more fives, you keep them low.
+
+      Ace count -1
+      5 count +1
+
+      If the running count is 1 or smaller, make the minimum bet. 
+      Yes, this also extends to negative running counts.
+
+      If the count is AT 2 or more, double your previous stake. If the count 
+      is still positive on the following round, double it again. You can keep 
+      raising the stakes as long as the count is BIGGER than 2 and the odds 
+      are in your favor. Of course, you still shouldn't go over the maximum 
+      - money management is still a factor.
+
+      If the court ever drops below 2, revert to the minimum stake.
+
+      The system was designed for classic 6-8 deck variants available at most casinos. 
+      As long as your decisions follow a reliable blackjack strategy chart, the 
+      probabilities will be in your favor.
+
+      The Ace/Five card counting system gives the player a 0.30-0.50%
+      advantage over the house."
+    card values:
+      "A": -1
+      "5": 1
+      "2": 0
+      "3": 0
+      "4": 0
+      "6": 0
+      "7": 0
+      "8": 0
+      "9": 0
+      "10": 0
+      "J": 0
+      "Q": 0
+      "K": 0
+    recommendations:
+      positive: 
+          - 2
+          - "Increase Bet (Double)"
+          - "Rich in Aces"
+      neutral:
+          - "Apuesta Neutral"
+          - "Mixed Cards"
+      negative:
+          - 1
+          - "Aposta Lo Mínimo"
+          - "Not Rich in Aces"
