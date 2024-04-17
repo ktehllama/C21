@@ -1,4 +1,6 @@
 # C21
+[![es](https://img.shields.io/badge/Cambiar_Lenguaje_a-Espa%C3%B1ol-%2369EAA1?style=flat
+)](https://github.com/ktehllama/C21/blob/main/README.es.md)
 
 ## Casinos Hate This One Simple Trick!
 In all seriousness, C21 is a _Blackjack Card Counting Calculator_ with an integrated
