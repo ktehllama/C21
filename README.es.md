@@ -32,6 +32,47 @@ Puedes hacer clic en los enlaces para obtener más información sobre los métod
 
 Finalmente, las tablas de estrategia básica te enseñan exactamente cuándo: pedir o plantarte, doblar, dividir parejas o rendirse. Estas son extremadamente útiles de tener y recomiendo [esta](https://www.blackjackapprenticeship.com/blackjack-strategy-charts/), también de Blackjack Apprenticeship.
 
+## Instalación del EXE
+Esta sección es si querés usar la versión EXE de C21 donde no necesitás instalar Python, solo
+instalá el archivo del programa, el archivo de configuración y el archivo de métodos.
+
+Instalá la carpeta como un Zip y descomprimila. Antes de hacer cualquier cosa, hay dos archivos importantes:
+- `c21_settings.json`
+- `e_bjstrats.yaml`
+
+### c21_settings
+Este es un archivo de configuración donde le decís al programa cuántas barajas de cartas estás usando, esto es
+esencial ya que todo se rompería si este archivo no estuviera aquí. La cantidad predeterminada de barajas es `6`; pero si
+estás jugando con más o menos barajas, todo lo que tenés que hacer es abrir el archivo JSON y editar el número al lado del
+valor `decks_amount`. La __cantidad máxima__ de barajas con las que podés jugar es `8`, y la __mínima__ es `1`.
+
+```json
+{"decks_amount":6}
+```
+
+### e_bjstrats
+Este es el archivo de métodos que contiene toda la lógica de cómo contar cartas y le dice al programa en qué idioma está, este archivo no debe eliminarse
+en ninguna circunstancia (a menos que quieras probar algo o lo que sea que quieras hacer).
+En la instalación predeterminada, el idioma está en __Inglés__. Si querés cambiarlo a __Español__, que es el único
+idioma compatible hasta ahora, podés eliminar todo en el archivo y reemplazarlo con este texto:
+
+[Versión en Español de e_bjstrats.yaml](https://github.com/ktehllama/C21/blob/main/C21-imgs/C21-Version-Español)
+
+> __Pro Tip__:
+No cambies nada en ese texto si no estás seguro de lo que hace.
+Si eliminás accidentalmente el archivo `e_bjstrats.yaml`, simplemente creá otro archivo
+con el mismo nombre y copiá el mismo contenido que tenía antes en él al nuevo archivo,
+asegurate de hacer el archivo en la misma carpeta.
+
+### Errores Posibles
+Podrías recibir un error de tu protector de Windows que dice que este es un archivo sospechoso, y esto es normal.
+Cada archivo EXE descargado desde GitHub se marca como peligroso, pero te prometo que este no es uno de ellos.
+Si no confiás en mí, entonces podés instalar Python normalmente, instalar los archivos normales de C21
+y ejecutar el código de forma nativa donde podés verlo.
+
+Después de descargar todo y cambiar la configuración según lo desees, ahora tenés un archivo EXE
+que puede ejecutar C21 directamente, solo recordá mantener todos los archivos juntos en la misma carpeta.
+
 ## Instalación
 C21 requiere una versión de [Python](https://www.python.org/) 3.10 o superior. Una vez que hayas instalado Python y lo hayas configurado, instala C21 como un archivo Zip y ejecuta el archivo principal: `akr_main.py`
 
@@ -80,7 +121,7 @@ Más Reciente >---------------> Más Antiguo
 Historial: 5, 6, A, 9, 10, 2, A, 2, 10
 ```
 
-> __Consejo Profesional:__
+> __Pro Tip:__
 Puedes cambiar el límite de las cartas que muestra de 10 a otro número yendo a la función `append_limit` y cambiando el valor predeterminado del parámetro `limit` a otro número. Trata de no hacerlo demasiado grande ya que todas las cartas no cabrán en la interfaz gráfica de usuario.
 
 ### Teclado de Cartas
