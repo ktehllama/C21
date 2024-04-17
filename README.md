@@ -43,6 +43,45 @@ nice and condensed for reading, though I would still recommend visting the websi
 
 Finally, basic strategy charts teaches you exactly when to: hit or stand, double down, split pairs or
 surrender. These are extremely useful to have and I recommend [this one](https://www.blackjackapprenticeship.com/blackjack-strategy-charts/), also by Blackjack Apprenticeship.
+## Exe Installation
+This section is for if you want to use the EXE version of C21 where you don't need to install Python, just
+instlal the program file, the settings file and the methods file.
+
+Install the folder as a Zip and Unzip it. Before doing anything, there are two important files: 
+- `c21_settings.json` 
+- `e_bjstrats.yaml`
+
+### c21_settings
+This is a settings file where you tell the program how many decks of cards you're using, this is
+essential since everything would break if this file were not here. The default amount of decks is `6`; but if you
+are playing with more or less decks, all you have to do is open the JSON file, and edit the number next to the
+`decks_amount` value. The __maximum amount__ of decks you can play with is `8`, and the __minimum__ is `1`.
+```json
+{"decks_amount":6}
+```
+
+### e_bjstrats
+This is the methods file that contains all the logic of how to count cards and tells the program what language its in, this should not be deleted 
+under any circumstances (unless you want to test something or whatever you want to do). 
+On default installation the language is in __English__. If you want to change it to __Spanish__ which is the only
+supported language as of now, you can delete everything in the file, and replace it with this:
+
+[Spanish Version For e_bjstrats.yaml](https://github.com/ktehllama/C21/blob/main/C21-imgs/C21-Version-Espa%C3%B1ol)
+
+> Pro Tip:
+Don't change anything in here if you're not sure what it does.
+Also if you accidentally delete the `e_bjstrats.yaml` file, just make another file
+with the same name add copy the same content it had before in it to the new file,
+make sure to make the file in the same folder.
+
+### Possible Errors
+You might get an error from your Windows defender that this is a suspicious file, and this is normal.
+Every EXE file downloaded from github is flagged as dangerous, but I promise this is not one of those.
+If you don't trust me, then you can install Python normally, install the normal C21 files 
+and run the code natively where you can see it.
+
+After you downloaded everything and changed the settings as you'd like, you now have an EXE file
+that can directly run C21, just remember to keep all the files together in the same folder.
 
 ## Installation
 C21 requires a [Python](https://www.python.org/) version 3.10 or above. Once you've installed Python and set it up,
