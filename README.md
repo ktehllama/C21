@@ -52,7 +52,7 @@ install C21 as a Zip file and run the main file: `akr_main.py`
 Later on, I will add an EXE file where the calculator can be run directly without the need
 to install Python.
 
-The only pip installation needed is `pyyaml`, the helper files are all there
+The only pip installation needed is `pyyaml` and `termcolor`, the helper files are all there
 and the rest of the modules are already build into Python.
 ```
 pip install pyyaml
