@@ -1,7 +1,8 @@
 from cyml_utils import *
 from termcolor import colored, cprint
+import os
 
-method_file: str = 'bjstrats.yaml'
+method_file: str = f"{os.path.abspath(__file__).replace('method_parse.py','')}inventory.yaml"
 auto_termination: str = f"AUTO TERMINATION at {__file__}"
 
 class MethodParser:
